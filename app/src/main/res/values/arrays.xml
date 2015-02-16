@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="profesores">
+        <item>Antonio Ruiz</item>
+        <item>Rodolfo Perez</item>
+    </string-array>
+
+    <string-array name="grupos">
+        <item>2º DAM</item>
+        <item>2º DAW</item>
+        <item>1º DAMW</item>
+    </string-array>
+
+    <string-array name="lugares">
+        <item>Biblioteca</item>
+        <item>SUM</item>
+        <item>Laboratorio</item>
+
+    </string-array>
+
+    <string-array name="departamentos">
+        <item>Informatica</item>
+        <item>Matematicas</item>
+        <item>Lengua y Literatura</item>
+
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,221 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.izv.angel.appinstituto.FragmentoComplementaria"
+    android:id="@+id/fragmento_complementaria">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Profesor:"
+            android:id="@+id/textView"
+            android:layout_marginTop="19dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spProfesor"
+            android:layout_alignTop="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Departamento:"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/spProfesor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvDepartamento"
+            android:layout_alignTop="@+id/spDepartamento"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_alignRight="@+id/spDepartamento"
+            android:layout_alignEnd="@+id/spDepartamento"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_above="@+id/spGrupo" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spDepartamento"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Grupo:"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/spDepartamento"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spGrupo"
+            android:layout_below="@+id/spDepartamento"
+            android:layout_alignLeft="@+id/spDepartamento"
+            android:layout_alignStart="@+id/spDepartamento" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Lugar:"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/spGrupo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spLugar"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:visibility="invisible" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/tvDescripcion"
+            android:autoText="false"
+            android:hint="Añadir Descripcion"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spLugar"
+            android:minLines="1"
+            android:gravity="start"
+            android:maxLines="5"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/ibFecha"
+            android:layout_below="@+id/tvDescripcion"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/ic_action_new_black"
+            android:scaleType="fitCenter"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="7"
+            android:id="@+id/etFecha"
+            android:hint="Añadir Fecha..."
+            android:layout_alignTop="@+id/ibFecha"
+            android:layout_toRightOf="@+id/textView3" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/ibHoraD"
+            android:src="@drawable/ic_action_new_black"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/ibFecha"
+            android:layout_alignRight="@+id/ibFecha"
+            android:layout_alignEnd="@+id/ibFecha"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/ibHoraH"
+            android:src="@drawable/ic_action_new_black"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/ibHoraD"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/ibHoraD"
+            android:layout_alignEnd="@+id/ibHoraD" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/etHoraD"
+            android:layout_above="@+id/ibHoraH"
+            android:layout_alignLeft="@+id/etFecha"
+            android:layout_alignStart="@+id/etFecha"
+            android:layout_alignRight="@+id/etFecha"
+            android:layout_alignEnd="@+id/etFecha"
+            android:hint="Hora desde..."
+            android:editable="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/etHoraH"
+            android:layout_alignBottom="@+id/ibHoraH"
+            android:layout_alignLeft="@+id/etHoraD"
+            android:layout_alignStart="@+id/etHoraD"
+            android:layout_alignRight="@+id/etHoraD"
+            android:layout_alignEnd="@+id/etHoraD"
+            android:hint="Hora Hasta..." />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:id="@+id/btAceptar"
+            android:layout_marginRight="23dp"
+            android:layout_marginEnd="23dp"
+            android:layout_below="@+id/etFecha"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            style="@style/btnStyleSeagull"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etLugar"
+            android:layout_below="@+id/spGrupo"
+            android:layout_alignLeft="@+id/spGrupo"
+            android:layout_alignStart="@+id/spGrupo"
+            android:layout_above="@+id/tvDescripcion"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</FrameLayout>

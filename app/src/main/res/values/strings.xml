@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Gestor de Actividades</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Buscar...</string>
+    <string name="title_activity_aniadir">Añadir Actividad</string>
+    <string name="hello_blank_fragment">Hello blank complementaria</string>
+    <string name="hello_blank_fragment2">Hello blank extraescolar</string>
+    <string name="search_hint">Buscar actividad</string>
+    <string name="title_activity_ver_actividades">Ver Actividades</string>
+    <string name="borrar">Borrar</string>
+</resources>
