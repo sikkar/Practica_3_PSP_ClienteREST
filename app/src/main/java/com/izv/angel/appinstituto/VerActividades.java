@@ -3,6 +3,7 @@ package com.izv.angel.appinstituto;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.media.Image;
 import android.os.AsyncTask;
 import android.support.v4.app.NavUtils;
@@ -38,6 +39,11 @@ public class VerActividades extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad_ver_actividades);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getResources().getBoolean(R.bool.portrait_only)){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }else{
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
         Intent intent = getIntent();
         id= intent.getIntExtra("pos", 0);
         act = Principal.actividades.get(id);

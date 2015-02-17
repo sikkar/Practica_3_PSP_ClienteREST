@@ -2,7 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.izv.angel.appinstituto.FragmentoComplementaria"
-    android:id="@+id/fragmento_complementaria_land">
+    android:id="@+id/fragmento_complementaria_land"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:foregroundGravity="top">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -11,7 +14,8 @@
         android:layout_height="fill_parent"
         android:layout_gravity="right|bottom"
         android:layout_margin="5dp"
-        android:padding="16dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,7 +60,8 @@
             android:layout_alignTop="@+id/textView2"
             android:layout_toLeftOf="@+id/ibHoraD"
             android:layout_alignLeft="@+id/spProfesor"
-            android:layout_alignStart="@+id/spProfesor" />
+            android:layout_alignStart="@+id/spProfesor"
+            android:visibility="invisible" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,7 +104,8 @@
             android:layout_alignRight="@+id/etFecha"
             android:layout_alignEnd="@+id/etFecha"
             android:layout_toRightOf="@+id/textView2"
-            android:layout_toEndOf="@+id/textView2" />
+            android:layout_toEndOf="@+id/textView2"
+            android:visibility="invisible" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -115,14 +121,14 @@
             android:layout_marginLeft="5dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="10dp"
             android:layout_below="@+id/spDepartamento" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="36dp"
             android:id="@+id/ibFecha"
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="41dp"
             android:src="@drawable/ic_action_new_black"
             android:scaleType="fitCenter"
             android:layout_below="@+id/spLugar"
@@ -173,7 +179,8 @@
             android:layout_alignBottom="@+id/ibHoraD"
             android:layout_toRightOf="@+id/ibHoraD"
             android:layout_toLeftOf="@+id/btAceptar"
-            android:layout_toStartOf="@+id/btAceptar" />
+            android:layout_toStartOf="@+id/btAceptar"
+            android:layout_marginRight="5dp" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -185,7 +192,8 @@
             android:layout_below="@+id/etHoraD"
             android:layout_toRightOf="@+id/ibHoraH"
             android:layout_alignRight="@+id/etHoraD"
-            android:layout_alignEnd="@+id/etHoraD" />
+            android:layout_alignEnd="@+id/etHoraD"
+            android:layout_marginRight="0dp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -198,6 +206,43 @@
             android:layout_alignParentEnd="true"
             android:width="100dp"
             style="@style/btnStyleSeagull"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvDepartamento"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_above="@+id/spGrupo"
+            android:layout_toLeftOf="@+id/ibHoraD"
+            android:layout_alignTop="@+id/spDepartamento"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2" />
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:id="@+id/imageView2"
+            android:src="@mipmap/comp"
+            android:scaleType="fitCenter"
+            android:layout_alignTop="@+id/spProfesor"
+            android:layout_toRightOf="@+id/ibHoraD"
+            android:layout_marginLeft="93dp"
+            android:layout_marginStart="93dp"
+            android:layout_above="@+id/tvDescripcion"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etLugar"
+            android:layout_below="@+id/spGrupo"
+            android:layout_alignLeft="@+id/spGrupo"
+            android:layout_alignStart="@+id/spGrupo"
+            android:layout_alignBottom="@+id/spLugar"
+            android:layout_alignRight="@+id/spLugar"
+            android:layout_alignEnd="@+id/spLugar" />
 
     </RelativeLayout>
 </FrameLayout>

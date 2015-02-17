@@ -13,7 +13,8 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="top">
 
             <TabWidget
                 android:id="@android:id/tabs"
@@ -23,23 +24,25 @@
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:layout_gravity="top">
 
                 <LinearLayout
                     android:id="@+id/tab1"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical"
-                    android:weightSum="1">
+                    android:weightSum="1"
+                    android:layout_gravity="top">
 
                     <fragment
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:name="com.izv.angel.appinstituto.FragmentoComplementaria"
                         android:id="@+id/fragmentcomp"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_gravity="top"
                         android:layout_weight="0.98"
-                        tools:layout="@layout/fragment_fragmento_complementaria" />
+                        tools:layout="@layout/fragment_fragmento_complementarias" />
 
                 </LinearLayout>
 
@@ -47,14 +50,16 @@
                     android:id="@+id/tab2"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_gravity="top"
+                    android:gravity="top">
 
                     <fragment
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:name="com.izv.angel.appinstituto.FragmentoExtraescolar"
                         android:id="@+id/fragmentextra"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_gravity="top|center_horizontal"
                         android:layout_weight="0.98"
                         tools:layout="@layout/fragment_fragmento_extraescolar" />
                 </LinearLayout>

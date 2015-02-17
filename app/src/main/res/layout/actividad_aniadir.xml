@@ -39,7 +39,7 @@
                         android:id="@+id/fragmentcomp"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="0.98"
-                        tools:layout="@layout/fragment_fragmento_complementaria" />
+                        tools:layout="@layout/fragment_fragmento_complementarias" />
 
                 </LinearLayout>
 

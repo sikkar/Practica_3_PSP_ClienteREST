@@ -37,6 +37,8 @@ public class Principal extends Activity {
     private ListView lv;
     private Adaptador ad;
     private String formattedDate;
+    private FragmentoVista fdet;
+    private boolean horizontal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,16 +49,22 @@ public class Principal extends Activity {
         }else{
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
+        fdet = (FragmentoVista) getFragmentManager().findFragmentById(R.id.fragmentoVista);
+        horizontal = fdet!=null && fdet.isInLayout();
         lv= (ListView)findViewById(R.id.lvActividades);
         ad = new Adaptador(this,R.layout.detalle,actividades);
         lv.setAdapter(ad);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Principal.this,VerActividades.class);
-                intent.putExtra("pos",position);
-                Log.v("posicion",position+"");
-                startActivity(intent);
+                if(horizontal) {
+                    fdet.cargarListView(position);
+                }else {
+                    Intent intent = new Intent(Principal.this,VerActividades.class);
+                    intent.putExtra("pos",position);
+                    Log.v("posicion",position+"");
+                    startActivity(intent);
+                }
             }
         });
         Calendar c = Calendar.getInstance();

@@ -46,7 +46,7 @@ public class FragmentoComplementaria extends Fragment  {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        v=inflater.inflate(R.layout.fragment_fragmento_complementaria, container, false);
+        v=inflater.inflate(R.layout.fragment_fragmento_complementarias, container, false);
         sp1 = (Spinner) v.findViewById(R.id.spProfesor);
         sp2 = (Spinner) v.findViewById(R.id.spDepartamento);
         sp3 = (Spinner) v.findViewById(R.id.spGrupo);
@@ -205,7 +205,6 @@ public class FragmentoComplementaria extends Fragment  {
                 post.execute(pp);
             }
         });
-
     }
 
     static class ParametrosPost {
